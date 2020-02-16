@@ -1,0 +1,69 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+}
+html {
+    font-size: 20px;
+    line-height: 1.7;
+}
+.page {
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0;
+    transform: translateX(-200%);
+}
+.page.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+#header{
+    background-color: rgb(253, 188, 188);
+    position: absolute;
+    font-size: 1.5rem;
+}
+#cards{
+    height: 75%;
+}
+#imgHeader{
+    height: 70%;
+}
+#imageProfile{
+    height: 100%;
+}
+#iconHeart{
+    font-size: 2.2rem;
+    transform: rotate(40deg);
+    color: rgb(148, 4, 4);
+    position: absolute;
+}
+#defaultMsg{
+    margin-top: 250px; 
+    text-align: center;
+    font-size: 1em;
+}
+#footer {
+    background-color: rgb(253, 188, 188);
+  }
+.text-padding {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+.listCard{
+    padding: 5px;
+    background-color: rgba(255, 179, 179, 0.116);
+    transition: all 0.5s linear;
+    opacity: 1;
+}
+.sendRight{
+    transform: translateX(200%);
+    opacity: 0;
+}

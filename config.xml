@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ca.edumedia.pate0773.tundra" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>pate0773-Tundra</name>
+    <description>
+        Application for Cordova Project Tundra MAD9022
+    </description>
+    <author email="pate0773@algonquinlive.com" href="http://cordova.io">
+        Minal Patel
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+    <!--
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+        <icon src="res/icon/android/mdpi.png" density="mdpi" />
+        <icon src="res/icon/android/hdpi.png" density="hdpi" />
+        <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
+        <icon src="res/icon/android/xxhdpi.png" density="xxhdpi" />
+        <icon src="res/icon/android/xxxhdpi.png" density="xxxhdpi" />
+       
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
+        <splash src="res/screen/android/splash-land-xxhdpi.png" density="land-xxhdpi"/>
+        <splash src="res/screen/android/splash-land-xxxhdpi.png" density="land-xxxhdpi"/>
+
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi"/>
+        <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi"/>
+
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="SplashShowOnlyFirstTime" value="true" />
+        <preference name="SplashScreenDelay" value="5000" />
+
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+     <!-- iOS 8.0+ -->
+        <!-- iPhone 6 Plus  -->
+        <icon src="res/icon/ios/icon-60@3x.png" width="180" height="180" />
+        <!-- iOS 7.0+ -->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="res/icon/ios/icon-60.png" width="60" height="60" />
+        <icon src="res/icon/ios/icon-60@2x.png" width="120" height="120" />
+        <!-- iPad -->
+        <icon src="res/icon/ios/icon-76@2x.png" width="152" height="152" />
+
+        <splash src="res/screen/ios/iPhone-X-Port.png" width="1125" height="2436"/>
+        <splash src="res/screen/ios/iPhone-X-Landscape.png" width="2436" height="1125"/>
+        <splash src="res/screen/ios/iPhone-8_7_6-Portrait.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/iPhone-8_7_6-Landscape.png" width="1334" height="750"/>
+        <splash src="res/screen/ios/iPhone-8_7_6-Plus-Portrait.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/iPhone-8_7_6-Plus-Landscape.png" width="2208" height="1242"/>
+        <splash src="res/screen/ios/iPad-Pro-10.5-in-Portrait.png" width="1668" height="2226"/>
+        <splash src="res/screen/ios/iPad-Pro-10.5-in-Landscape.png" width="2226" height="1668"/>
+        <splash src="res/screen/ios/iPad-Pro-12.9-in-Portrait.png" width="2048" height="2732"/>
+        <splash src="res/screen/ios/iPad-Pro-12.9-in-Landscape.png" width="1732" height="2048"/>
+
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="SplashShowOnlyFirstTime" value="true" />
+        <preference name="SplashScreenDelay" value="5000" />
+
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

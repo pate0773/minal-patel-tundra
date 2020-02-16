@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta
+    http-equiv="content-security-policy" content="
+        default-src 'self' gap://ready ;
+        script-src 'self' 'unsafe-inline';
+        style-src 'self';
+        font-src 'self' data:;
+        connect-src 'self' http://griffis.edumedia.ca/;
+        img-src 'self' http://griffis.edumedia.ca/
+    "/>
+    <link href="./css/tinyshell.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tundra App</title>
+</head>
+<body>
+    <header id="header" class="bar top">Tundra<i id="iconHeart" class="icon heart"></i>Dating</header>
+    <section class="page active" id="home">
+        <div id="cards" class="card fixed active">
+            <header id="imgHeader">
+                <img id="imageProfile" src="" alt="Emoji" class="round" />
+            </header>
+            <p>Name : <span id="name"></span></p>
+            <p>Gender : <span id="gender"></span></p>
+            <p>Distance : <span id="distance"></span></p>
+        </div>
+        <div id="savedMsg" class="overlay">
+            <section class="message">
+                <h1 class="success t1">Profile Saved</h1>
+            </section>
+        </div>
+        <div id="deleteMsg" class="overlay">
+            <section class="message">
+                <h1 class="error t1">Profile Deleted</h1>
+            </section>
+        </div>
+    </section>
+    <section class="page" id="saved">
+        <div id="defaultMsg">
+            <p>You haven't saved any Profile.</p>
+        </div>
+        <ul id="savedProfiles" class="list-view">
+            <!-- list of saved reviews gets added here -->
+        </ul>
+    </section>
+    <nav id="footer" class="bar bottom">
+        <div id="btnHome" class="tab icon home current" data-target="home">Home</div>
+        <div id="btnSaved" class="tab icon fav" data-target="saved">Saved</div>
+    </nav>
+    <script src="cordova.js"></script>
+    <script src="./js/tinyshell-min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
