@@ -30,6 +30,29 @@ html {
     position: absolute;
     font-size: 1.5rem;
 }
+#options{
+    text-align: center;
+    margin: 50% 5% 40% 5%; 
+    padding: 5% 0 5% 0;
+    border: 1px solid rgba(124, 121, 121, 0.534);
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(124, 124, 124);
+}
+select{
+    padding: 5px;
+    background: rgba(255, 179, 179, 0.116);
+}
+#btnStart{
+    height: 40px;
+    width: 100px;
+    border: none;
+    color: #000;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px rgb(124, 124, 124);
+    margin-top: 5%;
+    background-color: rgb(253, 188, 188);
+}
 #cards{
     height: 75%;
 }

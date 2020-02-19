@@ -4,21 +4,35 @@ const app = {
     profiles: [],
     savedProfiles: [],
     imgBaseURL: "http://griffis.edumedia.ca/mad9022/tundra/profiles/",
-    BaseURL: "http://griffis.edumedia.ca/mad9022/tundra/get.profiles.php?gender=female",
+    BaseURL: "http://griffis.edumedia.ca/mad9022/tundra/get.profiles.php?gender=",
     init: () => {
-      //get profiles from URL
-      app.getProfiles();
+        sessionStorage.clear();
+        document.getElementById("cards").style.display = "none";
+        document.getElementById("savedMsg").style.display = "none";
+        document.getElementById("deleteMsg").style.display = "none";
+        document.getElementById("btnStart").addEventListener("click", function(ev){
+            ev.preventDefault();
+            let gender = document.getElementById('genderOption').value;
+            if(gender != "both"){
+                app.BaseURL = `${app.BaseURL} + ${gender}`
+            }
+            //get profiles from URL
+            app.getProfiles();
+        })
       //add click listeners for navigation
       app.addListeners();
       app.addGestures();
     },
     getProfiles: () => {
+        document.getElementById("options").style.display = "none";
+        document.getElementById("cards").style.display = "block";
         var uri_dec = decodeURIComponent(app.BaseURL);
         console.log("Decoded URI: " + uri_dec);
         fetch(uri_dec)
         .then(response => response.json())
         .then(data => {
-            app.profiles = data.profiles;
+            let arr = data.profiles;
+            app.profiles = app.profiles.concat(arr);
             console.log("PROFILES:",app.profiles);
         });
         setTimeout(() => {
